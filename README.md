@@ -1,6 +1,6 @@
 # Predicting blood pressure changes after nitroglcerin dose titration using the eicu dataset
 
-This repository holds the source code to conduct an analysis using data from the [eicu](https://eicu-crd.mit.edu) database. The goal is to predict the systolic blood pressure after a nitroglycerin dose titration. The [targets](https://github.com/ropensci/targets) `R` package was used to manage the analysis workflow. Steps in the workflow are in the `_targets.R` file.
+This repository holds the source code to conduct an analysis using data from the [eicu](https://eicu-crd.mit.edu) database. The goal is to predict the systolic blood pressure after a nitroglycerin dose titration.
 
 ## Reproducible analysis with Docker
 
