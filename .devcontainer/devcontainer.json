@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/debian
+{
+	"name": "python 3.9 & R 4.2",
+	"image": "mcr.microsoft.com/devcontainers/python:3.9",
+// Configure tool-specific properties.
+"customizations": {
+	// Configure properties specific to VS Code.
+	"vscode": {		
+		// Add the IDs of extensions you want installed when the container is created.
+		"extensions": [
+			"ritwickdey.LiveServer",
+			"quarto.quarto",
+			"GitHub.copilot",
+			"reditorsupport.r",
+		]
+	}
+},
+	"postCreateCommand": "pip install autogluon && R -q -e \"Sys.setenv(DOWNLOAD_STATIC_LIBV8=1); pak::pak(c('reticulate', 'tidyverse', 'doParallel', 'tidymodels', 'targets', 'bigrquery', 'gtsummary', 'glmnet'))\"",
+	"features": {
+        "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+            "version": "4.2",
+            "vscodeRSupport": "full",
+            "installDevTools": true,
+			"installRMarkdown": true,
+			"installRadian": true,
+			"installJupyterlab": true
+        },
+	},
+}
