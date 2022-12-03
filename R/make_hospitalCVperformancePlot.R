@@ -21,7 +21,7 @@ make_hospitalCVperformancePlot = function(hospitalCVperformance) {
       # dashed horizontal line at 15.3
       geom_hline(yintercept = 15.3, linetype="dashed", color = "#aeb6bf", size = 1.5) +
       # start y axis at 0
-      scale_y_continuous(limits = c(0, 18)) +
+      scale_y_continuous(limits = c(0, 20)) +
         theme_minimal()+
         labs(x="Hospital", y="Root mean square error")
         # save plot

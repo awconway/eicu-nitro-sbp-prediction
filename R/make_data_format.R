@@ -94,6 +94,7 @@ make_data_format <- function(df, create_vasoactive_col = TRUE) {
       gender,
       apachescore,
       total_nitro,
+      unitType,
       unitAdmitSource,
       ends_with("_inf"),
       ends_with("_score"),

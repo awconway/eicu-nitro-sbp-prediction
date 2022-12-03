@@ -33,13 +33,13 @@ if (!dir.exists("figures")) {
 
 # Connecting to the eicu bigquery database
 
-eicu_conn  <- dbConnect(bigquery(),
-    project = "physionet-data",
-    dataset = "eicu_crd",
-    billing = Sys.getenv("BIGQUERY_ACCOUNT"),
-  )
+# eicu_conn  <- dbConnect(bigquery(),
+#     project = "physionet-data",
+#     dataset = "eicu_crd",
+#     billing = Sys.getenv("BIGQUERY_ACCOUNT"),
+#   )
 
-get_data()
+# get_data()
 
 #################################################
 
@@ -258,7 +258,7 @@ walk(1:5, function(x) {
 
 # run the autogluon model in python
 
-system2("python","python-scripts/autogluon.py")
+# system2("python","python-scripts/autogluon.py")
 
 # read in the autogluon results
 

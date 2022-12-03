@@ -11,6 +11,7 @@ get_data <- function() {
        admissionheight,
        admissionweight,
        unitAdmitSource,
+       unitType,
        uniquepid,
        hospitalid"
         ),
