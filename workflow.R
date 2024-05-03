@@ -1,4 +1,3 @@
-library(targets)
 library(tidymodels)
 library(tidyverse)
 library(bigrquery)
@@ -33,13 +32,9 @@ if (!dir.exists("figures")) {
 
 # Connecting to the eicu bigquery database
 
-# eicu_conn  <- dbConnect(bigquery(),
-#     project = "physionet-data",
-#     dataset = "eicu_crd",
-#     billing = Sys.getenv("BIGQUERY_ACCOUNT"),
-#   )
+eicu_conn  <- Sys.getenv("BIGQUERY_ACCOUNT")
 
-# get_data()
+get_data()
 
 #################################################
 

@@ -28,11 +28,11 @@ WHERE  {table}.patientunitstayid IN (SELECT INFUSION.patientunitstayid
               INFUSION.drugname = 'Nitroglycerin (mcg/min)')
           ")
 
-  result <- tbl(
+  result <- bq_project_query(
     connection,
     sql(query)
   ) %>%
-    collect()
+    bq_table_download()
 
   cli::cli_process_done()
   cli::cli_rule()

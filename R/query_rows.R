@@ -34,11 +34,11 @@ FROM   (SELECT {columns}
 WHERE  ( {rows})
 ")
 
-  result <- tbl(
+  result <- bq_project_query(
     connection,
     sql(query)
   ) %>%
-    collect()
+    bq_table_download()
 
   cli::cli_process_done()
   cli::cli_rule(left = "Query results for the {table} table")
