@@ -13,6 +13,9 @@ First, follow the instructions to gain access through [physionet](https://eicu-c
 ```r
 Sys.setenv(BIGQUERY_ACCOUNT="the billing account you want to use to query the eicu data")
 bigrquery::bq_auth(email = "your gmail address associated with physionet account")
+# if using github codespaces, you may need to use the following instead and paste the authorization code into the console.
+# options(gargle_oauth_client_type = "web")
+# bigrquery::bq_auth(email = "your gmail address associated with physionet account", use_oob = TRUE)
 ```
 
 >Make sure to select the option to allow access to bigquery
