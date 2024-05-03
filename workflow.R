@@ -253,7 +253,7 @@ walk(1:5, function(x) {
 
 # run the autogluon model in python
 
-# system2("python","python-scripts/autogluon.py")
+system2("python","python-scripts/autogluon.py")
 
 # read in the autogluon results
 
